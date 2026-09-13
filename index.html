@@ -61,6 +61,13 @@ footer{border-top:1px solid #222;padding:28px 0;color:#777;font-size:13px}
 .field textarea{resize:vertical}
 .formnote{margin:18px 0 0;color:#888;font-size:14px}
 .formnote a{color:#fff;font-weight:800}
+.faq{max-width:800px;margin:auto}
+.faq-item{border-bottom:1px solid var(--line);padding:18px 0}
+.faq-item summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:20px;font-weight:800;text-transform:uppercase;font-size:15px}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary:after{content:'+';color:var(--r);font-size:24px;font-weight:400;flex-shrink:0}
+.faq-item[open] summary:after{content:'−'}
+.faq-item p{color:#bbb;margin:12px 0 0;line-height:1.6;font-size:15px}
 @media(max-width:850px){
   nav a:not(.navbtn){display:none}
   .grid{grid-template-columns:1fr 1fr}
@@ -86,11 +93,11 @@ footer{border-top:1px solid #222;padding:28px 0;color:#777;font-size:13px}
 <body>
 <header><div class="wrap nav">
 <a href="#accueil"><img class="logo" src="images/logo.jpg" alt="AC MECA"></a>
-<nav><a href="#prestations">Prestations</a><a href="#realisations">Réalisations</a><a href="#apropos">À propos</a><a class="navbtn" href="#contact">Devis</a></nav>
+<nav><a href="#prestations">Prestations</a><a href="#realisations">Réalisations</a><a href="#apropos">À propos</a><a href="#faq">FAQ</a><a class="navbtn" href="#contact">Devis</a></nav>
 </div></header>
 
 <section class="hero" id="accueil"><div class="wrap"><div class="hero-inner">
-<div class="tag">Mécanique automobile · Sur rendez-vous</div>
+<div class="tag">Mécanique automobile · Vesoul & alentours · Sur rendez-vous</div>
 <h1>Votre voiture.<br><span>Notre savoir-faire.</span></h1>
 <p>Entretien, réparation, diagnostic et interventions mécaniques. AC MECA met son savoir-faire au service de votre véhicule, avec un travail soigné et des explications claires.</p>
 <div class="buttons"><a class="btn primary" href="#contact">Demander un devis</a><a class="btn" href="#realisations">Voir nos réalisations</a></div>
@@ -120,11 +127,22 @@ footer{border-top:1px solid #222;padding:28px 0;color:#777;font-size:13px}
 
 <section class="dark" id="apropos"><div class="wrap about">
 <div><h2 class="title">Pourquoi <span class="red">AC MECA ?</span></h2><p class="sub">Un objectif simple : un travail sérieux et transparent, avec possibilité de déplacement selon l'intervention mécanique.</p>
-<div class="points"><div class="point">✓ Devis avant intervention</div><div class="point">✓ Travail soigné</div><div class="point">✓ Tarifs transparents</div><div class="point">✓ Conseils personnalisés</div></div></div>
+<div class="points"><div class="point">✓ Devis avant intervention</div><div class="point">✓ Travail soigné</div><div class="point">✓ Tarifs transparents</div><div class="point">✓ Conseils personnalisés</div><div class="point">✓ Déplacement à Vesoul et ses alentours</div></div></div>
 <div class="box"><h3>Un entretien adapté à votre véhicule</h3><p>Chaque intervention commence par l'identification du besoin et un échange avec le client.</p><p>Le but : réparer ce qui doit l'être, expliquer ce qui a été fait et vous permettre de reprendre la route sereinement.</p></div>
 </div></section>
 
-<section id="contact">
+<section id="faq"><div class="wrap">
+<h2 class="title">Questions <span class="red">fréquentes</span></h2><p class="sub">Tout ce qu'il faut savoir avant de nous confier votre véhicule.</p>
+<div class="faq">
+<details class="faq-item"><summary>Comment obtenir un devis ?</summary><p>Remplissez le formulaire de devis en bas de page en précisant votre véhicule et l'intervention souhaitée, ou contactez-nous directement par téléphone ou e-mail. Nous revenons vers vous rapidement avec une estimation.</p></details>
+<details class="faq-item"><summary>Le devis est-il gratuit ?</summary><p>Oui, l'établissement du devis est gratuit et sans engagement de votre part.</p></details>
+<details class="faq-item"><summary>Proposez-vous un déplacement à domicile ?</summary><p>Selon le type d'intervention, un déplacement peut être organisé. Indiquez votre préférence dans le formulaire de devis, nous verrons ensemble ce qui est possible.</p></details>
+<details class="faq-item"><summary>Quels sont les délais d'intervention ?</summary><p>Les délais varient selon le type de réparation, notre planning du moment et le délai de réception des pièces nécessaires. Un créneau vous est communiqué dès la validation du devis.</p></details>
+<details class="faq-item"><summary>Travaillez-vous sur toutes les marques de véhicules ?</summary><p>Oui, AC MECA intervient sur la plupart des marques et modèles, essence comme diesel.</p></details>
+<details class="faq-item"><summary>Proposez-vous le diagnostic électronique ?</summary><p>Oui, AC MECA dispose d'une valise de diagnostic multimarque, permettant de lire les codes défauts et d'identifier précisément l'origine d'une panne, quel que soit le constructeur de votre véhicule.</p></details>
+</div></div></section>
+
+<section class="dark" id="contact">
 <div class="wrap">
   <h2 class="title">Demande de <span class="red">devis</span></h2>
   <p class="sub">Remplissez les informations ci-dessous. Votre demande sera préparée directement par e-mail pour AC MECA.</p>
@@ -171,7 +189,7 @@ footer{border-top:1px solid #222;padding:28px 0;color:#777;font-size:13px}
 </div>
 </section>
 
-<footer><div class="wrap">© 2026 AC MECA — Mécanique automobile · AcMeca70000@gmail.com · 06 37 19 09 09</div></footer>
+<footer><div class="wrap">© 2026 AC MECA — Mécanique automobile · AcMeca70000@gmail.com · 06 37 19 09 09<br>Auto-entrepreneur · SIRET 106 528 243 00012</div></footer>
 
 <script>
 function selectService(service){
